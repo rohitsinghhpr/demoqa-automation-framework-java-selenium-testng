@@ -1,5 +1,6 @@
 package com.demoqa;
 
+import listeners.ListenerExtentReport;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -27,12 +28,13 @@ public class TextBoxPageTest extends BaseTest{
 
         textBoxPage.enterFullName(fullName);
         System.out.println("Full Name entered: " + fullName);
+        ListenerExtentReport.getExtentTest().info("Full Name entered: " + fullName);
         textBoxPage.enterEmail(email);
-        System.out.println("Email entered: " + email);
+        ListenerExtentReport.getExtentTest().info("Email entered: " + email);
         textBoxPage.enterCurrentAddress(currentAddress);
-        System.out.println("Current Address entered: " + currentAddress);
+        ListenerExtentReport.getExtentTest().info("Current Address entered: " + currentAddress);
         textBoxPage.enterPermanentAddress(permanentAddress);
-        System.out.println("Permanent Address entered: " + permanentAddress);
+        ListenerExtentReport.getExtentTest().info("Permanent Address entered: " + permanentAddress);
 
     }
 }

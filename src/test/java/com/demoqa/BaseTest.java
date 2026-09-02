@@ -1,9 +1,12 @@
 package com.demoqa;
 
+import listeners.ListenerExtentReport;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Listeners;
 import utils.FrameworkConstants;
 import utils.WebDriverUtils;
 
+@Listeners({ListenerExtentReport.class})
 public class BaseTest {
     public void setUpWebDriver(String browserName){
         WebDriver driver = WebDriverUtils.createInstanceOfWebDriver(browserName);
